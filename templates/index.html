@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ cfg.SITE_NAME }} · {{ cfg.TAGLINE }} | {{ cfg.UNIVERSITY }}</title>
+<meta name="description" content="{{ cfg.SITE_NAME }} predicts University of Zimbabwe students' final marks from attendance, coursework and study habits using machine learning.">
+<script>
+(function(){var t=null;try{t=localStorage.getItem("gradex-theme")}catch(e){}
+if(t!=="dark"&&t!=="light"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+document.documentElement.setAttribute("data-theme",t)})();
+</script>
+<link rel="icon" href="{{ url_for('static', filename='img/uz-logo-sm.png') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- ============================== NAVBAR ============================== -->
+<header class="nav" id="top">
+  <div class="nav-in">
+    <a class="brand" href="#home" aria-label="{{ cfg.SITE_NAME }} home">
+      <span class="brand-mark"><i class="bi bi-mortarboard-fill"></i></span>
+      <span class="brand-text"><b>Grade<em>X</em></b><small>{{ cfg.TAGLINE|upper }}</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="#home" data-link>Home</a>
+      <a href="#about" data-link>About</a>
+      <a href="#workflow" data-link>Workflow</a>
+      <a href="#services" data-link>Services</a>
+      <a href="#team" data-link>Team</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+    <a class="uz-badge" href="#team" title="Built at the {{ cfg.UNIVERSITY }}">
+      <img src="{{ url_for('static', filename='img/uz-logo-sm.png') }}" alt="{{ cfg.UNIVERSITY }} crest" width="46" height="58">
+      <span><small>Built at the</small><b>{{ cfg.UNIVERSITY }}</b></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+
+<main>
+<!-- ================================ HOME ================================ -->
+<section id="home" class="wrap">
+  <div class="hero">
+    <div class="hero-text">
+      <span class="tag light"><i class="bi bi-stars"></i> {{ cfg.UNIVERSITY|upper }} · GROUP PROJECT 19</span>
+      <h1>Know the mark<br>before the <span class="grad">exam.</span></h1>
+      <p>{{ cfg.SITE_NAME }} predicts a student's final mark from <b>attendance</b>, <b>coursework</b> and <b>study habits</b>, then compares three machine-learning models to show which one predicts best.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#predictor"><i class="bi bi-speedometer2"></i> Try the predictor</a>
+        <a class="btn ghost" href="#services"><i class="bi bi-bar-chart-line"></i> See the results</a>
+      </div>
+      <div class="prog-label">Choose a programme</div>
+      <div class="prog-select" data-prog-select></div>
+    </div>
+    <aside class="hero-card" aria-label="The three basics">
+      <h3>What drives a final mark?</h3>
+      <p class="muted">Link between each basic factor and the final mark (<span data-prog-title>…</span>)</p>
+      <div id="heroBasics" class="basics"></div>
+    </aside>
+  </div>
+
+  <div class="stats" id="stats">
+    <div class="stat reveal"><i class="bi bi-people-fill"></i><div class="num"><span class="counter" data-key="students">0</span></div><p>Students analysed</p></div>
+    <div class="stat reveal"><i class="bi bi-mortarboard"></i><div class="num"><span class="counter" data-key="avg">0</span></div><p>Average final mark</p></div>
+    <div class="stat reveal"><i class="bi bi-arrow-down-circle"></i><div class="num"><span class="counter" data-key="min">0</span></div><p>Lowest mark</p></div>
+    <div class="stat reveal"><i class="bi bi-patch-check-fill"></i><div class="num"><span class="counter" data-key="pass">0</span></div><p>Pass rate (≥ {{ cfg.PASS_MARK }}%)</p></div>
+    <div class="stat reveal"><i class="bi bi-calendar-check"></i><div class="num"><span class="counter" data-key="attendance">0</span></div><p>Average attendance</p></div>
+    <div class="stat reveal"><i class="bi bi-bullseye"></i><div class="num"><span class="counter" data-key="accuracy">0</span></div><p>Model accuracy (R²)</p></div>
+  </div>
+</section>
+
+<!-- ================================ ABOUT ================================ -->
+<section id="about" class="wrap section">
+  <div class="about card reveal">
+    <div class="about-text">
+      <span class="tag">ABOUT PROJECT</span>
+      <h2>Student Performance Prediction</h2>
+      <p>{{ cfg.SITE_NAME }} is a machine-learning web application that estimates how a {{ cfg.UNIVERSITY }} student will perform in their final assessment. It learns from attendance, coursework marks, study habits and a few background factors that matter in Zimbabwe, such as A-Level points, accommodation, fees funding and internet access.</p>
+      <p>Lecturers can spot students who may need extra support early, and students can see which habits move their mark the most.</p>
+      <ul class="checks">
+        <li><i class="bi bi-check-circle-fill"></i> Predicts the <b>final mark (0–100%)</b> from attendance, coursework and study habits</li>
+        <li><i class="bi bi-check-circle-fill"></i> Compares <b>Linear Regression, Decision Tree and Random Forest</b></li>
+        <li><i class="bi bi-check-circle-fill"></i> <b>Feature selection</b> shows which inputs matter most</li>
+        <li><i class="bi bi-check-circle-fill"></i> Evaluated with 5-fold <b>cross-validation</b>: average error, R² and pass/fail accuracy</li>
+        <li><i class="bi bi-check-circle-fill"></i> Datasets: Computer Science, Law and Medicine, plus your own CSV</li>
+      </ul>
+      <a class="btn solid" href="#services">Explore services</a>
+    </div>
+    <div class="about-side">
+      <div class="scale">
+        <h3><i class="bi bi-award"></i> {{ cfg.UNIVERSITY }} classes</h3>
+        <p class="muted">Pass mark starts at {{ cfg.PASS_MARK }}%. Class 1 is the highest.</p>
+        <table>
+          {% set ns = namespace(upper=100) %}
+          {% for lo, short, long, colour in cfg.GRADING %}
+          <tr><td><span class="dot" style="background:{{ colour }}"></span>{{ long }}</td><td class="r">{{ lo }}–{{ ns.upper }}%</td></tr>
+          {% set ns.upper = lo - 1 %}
+          {% endfor %}
+        </table>
+      </div>
+      <div class="note"><i class="bi bi-info-circle"></i> Datasets are <b>synthetic</b> (no real students), built to mimic the university context. Use for learning only.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== WORKFLOW =============================== -->
+<section id="workflow" class="wrap section">
+  <div class="dark-panel">
+    <div class="center-head">
+      <span class="tag light">HOW IT WORKS</span>
+      <h2>Our Workflow</h2>
+      <p>From raw student data to a predicted mark in six clear steps.</p>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><span class="step">1</span><div class="tl-card"><h4>Collect data</h4><p>200 students per programme with attendance, coursework, study habits and background factors. Add your own CSV any time.</p></div></li>
+      <li class="reveal"><span class="step">2</span><div class="tl-card"><h4>Prepare data</h4><p>Numbers are scaled and categories (e.g. accommodation) are encoded inside a pipeline, so test data never leaks into training.</p></div></li>
+      <li class="reveal"><span class="step">3</span><div class="tl-card"><h4>Select features</h4><p>Permutation importance shuffles one input at a time to measure how much the predictions get worse without it.</p></div></li>
+      <li class="reveal"><span class="step">4</span><div class="tl-card"><h4>Train three models</h4><p>Linear Regression (a straight-line formula), Decision Tree (yes/no rules) and Random Forest (many trees voting), plus a "guess the average" baseline.</p></div></li>
+      <li class="reveal"><span class="step">5</span><div class="tl-card"><h4>Evaluate fairly</h4><p>5-fold cross-validation: every student is predicted by a model that never saw them. We report average error, R² and pass/fail accuracy.</p></div></li>
+      <li class="reveal"><span class="step">6</span><div class="tl-card"><h4>Predict and advise</h4><p>Enter a student profile to get the forecast mark, class and the changes that would help the most.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- =============================== SERVICES =============================== -->
+<section id="services" class="wrap section">
+  <div class="center-head dark-text">
+    <span class="tag">RESULTS & TOOLS</span>
+    <h2>Our Services</h2>
+    <p>Simple charts, a live predictor and the full dataset, for <b data-prog-title>…</b>.</p>
+    <div class="prog-select center" data-prog-select></div>
+  </div>
+
+  <div class="grid2" id="charts">
+    <article class="card chart-card reveal">
+      <h3><i class="bi bi-bar-chart-fill"></i> Students in each class</h3>
+      <div class="chart-box"><canvas id="chDist"></canvas></div>
+      <p class="caption" id="insDist"></p>
+    </article>
+    <article class="card chart-card reveal">
+      <h3><i class="bi bi-cpu"></i> Which model predicts best?</h3>
+      <div class="chart-box"><canvas id="chModels"></canvas></div>
+      <p class="caption" id="insModels"></p>
+    </article>
+    <article class="card chart-card reveal">
+      <h3><i class="bi bi-funnel"></i> What affects the mark most?</h3>
+      <div class="chart-box"><canvas id="chImp"></canvas></div>
+      <p class="caption" id="insImp"></p>
+    </article>
+    <article class="card chart-card reveal">
+      <h3><i class="bi bi-graph-up"></i> Factor vs final mark</h3>
+      <div class="seg" id="seg">
+        <button data-key="attendance" class="on">Attendance</button>
+        <button data-key="coursework">Coursework</button>
+        <button data-key="study_hours">Study hours</button>
+      </div>
+      <div class="chart-box short"><canvas id="chScatter"></canvas></div>
+      <p class="caption" id="insScatter"></p>
+    </article>
+  </div>
+
+  <article class="card reveal table-card">
+    <h3><i class="bi bi-table"></i> Model scorecard</h3>
+    <div class="tscroll">
+      <table class="tbl" id="modelTable">
+        <thead><tr><th>Model</th><th>Average error</th><th>R² (accuracy)</th><th>Pass/fail correct</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="muted small">Average error = how many marks the prediction is off on average (lower is better). R² = share of mark differences the model explains (higher is better, max 100%).</p>
+  </article>
+
+  <!-- ---------------------------- PREDICTOR ---------------------------- -->
+  <article class="card predictor reveal" id="predictor">
+    <div class="pred-head">
+      <div><span class="tag">LIVE PREDICTOR</span><h2>Predict a final mark</h2></div>
+      <p class="muted">Move the sliders. The forecast updates instantly using the best model for <b data-prog-title>…</b>.</p>
+    </div>
+    <div class="pred-grid">
+      <form id="predictForm" class="pform" onsubmit="return false">
+        {% for f in fields %}
+        <label class="field">
+          <span class="fl"><i class="gtag">{{ f.group }}</i>{{ f.label }} <output id="o-{{ f.key }}">{{ f.default }}</output><em>{{ f.unit }}</em></span>
+          <input type="range" id="f-{{ f.key }}" name="{{ f.key }}" min="{{ f.min }}" max="{{ f.max }}" step="{{ f.step }}" value="{{ f.default }}">
+        </label>
+        {% endfor %}
+        {% for s in selects %}
+        <label class="field">
+          <span class="fl">{{ s.label }}</span>
+          <select id="f-{{ s.key }}" name="{{ s.key }}">
+            {% for o in s.options %}<option{% if o == s.default %} selected{% endif %}>{{ o }}</option>{% endfor %}
+          </select>
+        </label>
+        {% endfor %}
+      </form>
+      <div class="presult">
+        <div class="pr-top">
+          <small>Forecast final mark</small>
+          <div class="big"><span id="predNum">--</span><em>%</em></div>
+          <span class="badge" id="predClass">—</span>
+          <p id="predMsg" class="muted"></p>
+        </div>
+        <div class="band" id="band" aria-hidden="true"><span class="marker" id="marker"></span></div>
+        <div class="band-labels"><span>0</span><span>{{ cfg.PASS_MARK }} pass</span><span>100</span></div>
+        <div class="chips" id="predModels"></div>
+        <div class="tips">
+          <h4><i class="bi bi-lightbulb"></i> What would help most?</h4>
+          <ul id="predTips"><li class="muted">Adjust the sliders to see suggestions.</li></ul>
+          <p class="muted small">Estimates from the model, not guarantees.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ----------------------------- RAW DATA ----------------------------- -->
+  <article class="card reveal" id="data">
+    <div class="pred-head">
+      <div><span class="tag">RAW DATA</span><h2>Dataset: <span data-prog-title>…</span></h2></div>
+      <div class="toolbar">
+        <input type="search" id="q" placeholder="Search the table…" aria-label="Search the table">
+        <a class="btn solid sm" id="dl" href="#"><i class="bi bi-download"></i> Download CSV</a>
+      </div>
+    </div>
+    <div class="tscroll tall">
+      <table class="tbl dense" id="rawTable"><thead></thead><tbody></tbody></table>
+    </div>
+    <div class="pager">
+      <span id="pageInfo" class="muted small"></span>
+      <div><button class="btn solid sm" id="prev">← Previous</button> <button class="btn solid sm" id="next">Next →</button></div>
+    </div>
+  </article>
+
+  <!-- --------------------------- ADD DATASET --------------------------- -->
+  <article class="card reveal upload">
+    <div>
+      <span class="tag">ADD YOUR OWN DATA</span>
+      <h2>Add a programme</h2>
+      <p class="muted">Upload a CSV for another programme (e.g. Engineering). It appears in the programme list and is analysed automatically. Required columns:</p>
+      <p class="cols">{% for c in required %}<code>{{ c }}</code>{% endfor %}</p>
+      <a class="link" href="/api/template.csv"><i class="bi bi-file-earmark-arrow-down"></i> Download a template CSV</a>
+    </div>
+    <form id="uploadForm" class="uform">
+      <input type="text" id="upName" placeholder="Programme name, e.g. Engineering" maxlength="40" required>
+      <input type="file" id="upFile" accept=".csv" required>
+      <button class="btn primary" type="submit"><i class="bi bi-cloud-arrow-up"></i> Upload and analyse</button>
+      <p id="upMsg" class="small"></p>
+    </form>
+  </article>
+</section>
+
+<!-- ================================= TEAM ================================= -->
+<section id="team" class="wrap section">
+  <div class="center-head dark-text">
+    <span class="tag">THE TEAM</span>
+    <h2>Built at the {{ cfg.UNIVERSITY }}</h2>
+    <p>{{ cfg.COURSE }}</p>
+  </div>
+  <div class="team-grid">
+    <article class="card creator reveal">
+      <img class="crest" src="{{ url_for('static', filename='img/uz-logo.png') }}" alt="{{ cfg.UNIVERSITY }} crest" loading="lazy">
+      <span class="tag">SITE CREATOR</span>
+      <h3>{{ cfg.CREATOR.name }}</h3>
+      <p class="muted">{{ cfg.CREATOR.programme }} · {{ cfg.CREATOR.level }}<br>{{ cfg.UNIVERSITY }}</p>
+      <p class="lines">
+        <a href="mailto:{{ cfg.CREATOR.email }}"><i class="bi bi-envelope-fill"></i> {{ cfg.CREATOR.email }}</a>
+        <a href="tel:{{ cfg.CREATOR.phone }}"><i class="bi bi-telephone-fill"></i> {{ cfg.CREATOR.phone }}</a>
+      </p>
+    </article>
+    <div class="members">
+      {% for m in cfg.TEAM %}
+      <div class="member card reveal"><span class="avatar">{{ m.name[0] }}</span><div><b>{{ m.name }}</b><small>{{ m.role }}{% if m.reg %} · {{ m.reg }}{% endif %}</small></div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ================================ CONTACT ================================ -->
+<section id="contact" class="wrap section">
+  <div class="dark-panel contact">
+    <h2 class="center">Contact Us</h2>
+    <div class="contact-grid">
+      <div>
+        <h3 class="cyan">Get In Touch</h3>
+        <p>Questions about the project, the data or the models? Send us a message.</p>
+        <p class="line"><i class="bi bi-envelope-fill"></i> <a href="mailto:{{ cfg.CREATOR.email }}">{{ cfg.CREATOR.email }}</a></p>
+        <p class="line"><i class="bi bi-telephone-fill"></i> <a href="tel:{{ cfg.CREATOR.phone }}">{{ cfg.CREATOR.phone }}</a></p>
+        <p class="line"><i class="bi bi-geo-alt-fill"></i> {{ cfg.LOCATION }}</p>
+      </div>
+      <form id="contactForm" class="cform">
+        <input type="text" id="cName" placeholder="Your Name" maxlength="80" required>
+        <input type="email" id="cEmail" placeholder="Your Email" maxlength="120" required>
+        <input type="text" id="cSubject" placeholder="Subject" maxlength="120">
+        <textarea id="cMsg" placeholder="Your Message" rows="4" maxlength="2000" required></textarea>
+        <button class="btn primary block" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================================ FOOTER ================================ -->
+<footer class="wrap">
+  <div class="dark-panel foot">
+    <div class="foot-grid">
+      <div>
+        <h4 class="cyan">{{ cfg.SITE_NAME }} · {{ cfg.TAGLINE }}</h4>
+        <p>A machine-learning web application that predicts academic performance from attendance, coursework and study habits.</p>
+        <div class="foot-logo"><img src="{{ url_for('static', filename='img/uz-logo-sm.png') }}" alt="{{ cfg.UNIVERSITY }} crest" loading="lazy"><span>{{ cfg.UNIVERSITY }}<br><small>Knowledge · Diligence · Integrity</small></span></div>
+      </div>
+      <div>
+        <h4 class="cyan">Quick Links</h4>
+        <ul class="flinks"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#workflow">Workflow</a></li><li><a href="#services">Services</a></li><li><a href="#team">Team</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4 class="cyan">Contact Information</h4>
+        <p class="line"><i class="bi bi-envelope-fill"></i> {{ cfg.CREATOR.email }}</p>
+        <p class="line"><i class="bi bi-telephone-fill"></i> {{ cfg.CREATOR.phone }}</p>
+        <p class="line"><i class="bi bi-geo-alt-fill"></i> Harare, Zimbabwe</p>
+      </div>
+    </div>
+    <div class="refs">
+      <h4 class="cyan">References</h4>
+      <ol>
+        {% for r in cfg.REFERENCES %}<li>{{ r.text }}{% if r.url %} <a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.url }}</a>{% endif %}</li>{% endfor %}
+      </ol>
+    </div>
+    <p class="copy">© 2026 {{ cfg.SITE_NAME }} · Built by {{ cfg.CREATOR.name }}, {{ cfg.UNIVERSITY }}. Data are synthetic and for learning only.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<div class="toast" id="toast" role="status"></div>
+
+<script>window.GRADEX = {{ boot|tojson }};</script>
+<script src="{{ url_for('static', filename='vendor/chart.umd.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+attendance,coursework,prev_avg,study_hours,part_time_hours,a_level_points,level,housing,funding,internet,final_mark
+73,66,73,12,8,14,Level 4.1,On campus,Family-sponsored,Limited,61
+95,52,52,7,4,12,Level 4.1,Off campus,Scholarship,Limited,56
+58,41,46,2,5,12,Level 1.2,On campus,Family-sponsored,Limited,37
+91,55,60,8,5,12,Level 2.1,Off campus,Self-funded,Limited,52
+84,44,43,1,4,12,Level 4.2,On campus,Self-funded,Reliable,41
+99,64,75,10,4,15,Level 3.1,Home,Scholarship,Reliable,69
+92,70,71,16,4,14,Level 1.2,On campus,Family-sponsored,Reliable,73
+67,63,64,25,5,12,Level 4.2,Off campus,Family-sponsored,Limited,62
+77,76,69,13,7,14,Level 2.2,Off campus,Scholarship,Reliable,72
+79,44,45,13,0,12,Level 3.1,Off campus,Scholarship,Limited,55
+58,47,41,3,8,11,Level 3.1,Home,Self-funded,Limited,45
+87,67,59,11,3,14,Level 3.1,Off campus,Family-sponsored,Limited,60
+66,54,54,11,4,14,Level 3.1,On campus,Self-funded,Limited,51
+57,49,52,7,1,12,Level 1.1,Home,Self-funded,Limited,43
+80,57,57,15,14,12,Level 4.1,On campus,Self-funded,Limited,59
+79,63,71,17,9,14,Level 3.2,Off campus,Scholarship,Reliable,65
+77,55,49,9,3,12,Level 4.1,On campus,Self-funded,Reliable,57
+71,68,50,8,12,12,Level 3.2,On campus,Self-funded,Reliable,59
+61,63,61,10,5,12,Level 3.1,On campus,Self-funded,Reliable,53
+84,60,59,12,5,13,Level 2.1,On campus,Self-funded,Limited,60
+69,65,68,11,4,14,Level 3.2,Home,Scholarship,Limited,57
+75,65,59,13,5,14,Level 3.1,Off campus,Family-sponsored,Reliable,60
+98,74,68,14,3,13,Level 2.1,Off campus,Self-funded,Reliable,67
+88,54,48,10,6,12,Level 3.1,Home,Self-funded,Reliable,56
+68,59,57,9,3,10,Level 2.1,On campus,Self-funded,Limited,53
+77,66,63,15,1,13,Level 4.1,Off campus,Scholarship,Limited,63
+74,52,51,16,5,13,Level 4.1,Off campus,Self-funded,Reliable,55
+83,58,47,7,1,11,Level 4.1,Off campus,Family-sponsored,Limited,57
+91,62,55,14,7,13,Level 2.1,Off campus,Scholarship,Limited,59
+75,52,63,9,3,15,Level 2.2,Off campus,Self-funded,Reliable,47
+67,60,46,10,5,12,Level 2.2,On campus,Family-sponsored,Limited,46
+71,63,63,5,14,13,Level 1.1,On campus,Self-funded,Reliable,59
+79,71,76,15,14,12,Level 1.1,Off campus,Family-sponsored,Limited,54
+76,37,40,1,2,10,Level 2.1,On campus,Self-funded,Limited,39
+43,29,42,1,2,11,Level 1.2,On campus,Family-sponsored,Reliable,20
+64,65,57,12,6,13,Level 4.2,On campus,Family-sponsored,Reliable,52
+47,47,54,17,12,11,Level 1.1,On campus,Self-funded,Limited,45
+83,64,68,12,6,15,Level 2.1,Off campus,Family-sponsored,Limited,55
+100,94,80,14,6,15,Level 2.2,On campus,Family-sponsored,Limited,79
+71,58,63,13,12,12,Level 3.2,Home,Family-sponsored,Reliable,54
+61,44,46,13,9,12,Level 1.1,On campus,Scholarship,Limited,40
+74,59,61,3,9,11,Level 3.2,On campus,Self-funded,Reliable,62
+78,59,54,17,1,13,Level 3.1,Off campus,Self-funded,Reliable,65
+83,60,44,7,6,13,Level 2.2,On campus,Self-funded,Limited,58
+71,43,40,1,3,12,Level 4.1,Off campus,Scholarship,Reliable,43
+67,62,69,12,5,14,Level 4.2,Off campus,Self-funded,Limited,48
+66,43,36,8,5,9,Level 1.2,Off campus,Self-funded,Reliable,52
+95,71,57,10,6,12,Level 4.2,On campus,Scholarship,Limited,77
+67,58,52,11,1,15,Level 3.1,Home,Family-sponsored,Reliable,52
+86,66,69,21,4,13,Level 4.2,Off campus,Family-sponsored,Reliable,66
+78,61,43,9,9,11,Level 2.2,Off campus,Self-funded,Reliable,58
+78,65,59,13,16,13,Level 4.2,Off campus,Family-sponsored,Reliable,59
+42,46,44,12,7,10,Level 1.2,Off campus,Scholarship,Limited,33
+87,56,53,9,1,11,Level 1.1,On campus,Scholarship,Limited,61
+70,58,70,10,2,12,Level 2.2,On campus,Family-sponsored,Limited,57
+79,58,69,11,2,12,Level 3.2,Off campus,Self-funded,Reliable,67
+54,48,45,9,3,12,Level 4.2,On campus,Self-funded,Reliable,47
+73,81,79,12,1,15,Level 3.2,Off campus,Family-sponsored,Limited,71
+65,69,81,14,4,14,Level 4.2,Home,Family-sponsored,Reliable,63
+69,52,49,3,2,12,Level 4.2,On campus,Scholarship,Limited,45
+67,25,25,9,6,9,Level 3.2,Off campus,Family-sponsored,Reliable,40
+70,49,39,11,4,9,Level 4.2,On campus,Family-sponsored,Reliable,55
+78,51,59,7,9,12,Level 4.2,Off campus,Scholarship,Limited,59
+80,58,56,11,2,11,Level 2.2,Home,Self-funded,Reliable,56
+83,62,48,9,10,12,Level 4.2,Home,Family-sponsored,Limited,52
+75,49,52,13,1,12,Level 3.1,Home,Self-funded,Reliable,54
+86,71,55,12,4,13,Level 3.2,Home,Self-funded,Limited,66
+62,45,52,8,2,11,Level 4.1,Off campus,Self-funded,Reliable,48
+69,32,38,9,2,10,Level 3.2,Off campus,Self-funded,Reliable,42
+66,46,41,7,6,13,Level 4.2,Off campus,Self-funded,Limited,35
+81,71,64,13,4,13,Level 4.1,Home,Family-sponsored,Reliable,61
+44,46,45,14,2,12,Level 4.2,On campus,Family-sponsored,Reliable,36
+74,55,64,7,2,13,Level 4.1,Off campus,Family-sponsored,Limited,51
+85,62,65,10,2,14,Level 2.2,Off campus,Scholarship,Reliable,63
+73,58,59,10,6,10,Level 1.2,Off campus,Self-funded,Reliable,52
+65,56,53,22,4,12,Level 4.1,Off campus,Self-funded,Limited,53
+79,52,60,11,6,12,Level 4.1,On campus,Family-sponsored,Reliable,60
+61,46,54,16,5,11,Level 2.1,Off campus,Family-sponsored,Limited,54
+82,73,67,15,2,12,Level 3.2,Off campus,Family-sponsored,Limited,62
+73,67,46,9,3,11,Level 1.2,Off campus,Self-funded,Limited,55
+64,42,36,11,4,11,Level 1.1,Home,Self-funded,Reliable,48
+96,83,73,19,1,14,Level 2.1,Off campus,Scholarship,Reliable,78
+56,48,39,6,2,11,Level 3.1,On campus,Self-funded,Reliable,43
+100,66,74,17,6,14,Level 2.1,Off campus,Family-sponsored,Reliable,71
+90,64,46,16,7,11,Level 3.1,Off campus,Family-sponsored,Limited,54
+83,70,66,14,13,12,Level 1.2,Off campus,Family-sponsored,Reliable,65
+83,57,63,11,6,13,Level 4.2,On campus,Self-funded,Reliable,59
+68,45,58,4,2,13,Level 2.2,Off campus,Family-sponsored,Reliable,47
+74,75,60,16,6,14,Level 2.2,On campus,Self-funded,Reliable,62
+81,50,62,13,11,14,Level 1.2,On campus,Self-funded,Limited,58
+75,58,52,7,4,11,Level 3.1,Off campus,Self-funded,Limited,48
+89,52,58,10,2,12,Level 1.1,Off campus,Family-sponsored,Reliable,55
+62,41,36,1,2,10,Level 1.2,On campus,Self-funded,Reliable,40
+82,62,48,13,5,12,Level 3.2,On campus,Family-sponsored,Reliable,58
+52,36,29,8,5,9,Level 4.2,Off campus,Self-funded,Reliable,34
+84,54,52,8,3,11,Level 4.1,Off campus,Self-funded,Reliable,55
+88,61,65,18,3,13,Level 1.2,Home,Self-funded,Limited,61
+89,66,63,14,2,13,Level 2.1,Off campus,Self-funded,Limited,60
+66,52,49,10,5,14,Level 2.1,Off campus,Self-funded,Limited,49
+47,34,23,13,6,9,Level 3.1,Off campus,Self-funded,Reliable,39
+70,62,47,16,4,9,Level 2.2,On campus,Scholarship,Reliable,68
+84,60,71,18,1,13,Level 2.2,On campus,Self-funded,Limited,64
+84,55,54,4,5,10,Level 2.2,Home,Self-funded,Limited,53
+89,63,61,10,1,12,Level 3.1,Off campus,Self-funded,Limited,65
+74,38,48,8,2,12,Level 1.1,Off campus,Self-funded,Limited,46
+57,75,67,12,5,14,Level 4.2,Home,Family-sponsored,Reliable,59
+86,47,34,6,3,10,Level 1.2,Off campus,Self-funded,Limited,38
+90,54,59,11,10,10,Level 1.2,On campus,Self-funded,Reliable,56
+80,61,57,12,9,12,Level 2.1,Off campus,Self-funded,Reliable,60
+88,66,64,15,3,13,Level 1.2,Off campus,Family-sponsored,Reliable,65
+78,59,51,6,5,14,Level 4.2,On campus,Family-sponsored,Limited,42
+79,62,53,13,1,14,Level 3.2,On campus,Scholarship,Reliable,57
+63,44,28,2,1,9,Level 3.1,On campus,Family-sponsored,Reliable,41
+82,80,76,17,1,15,Level 1.1,On campus,Self-funded,Limited,69
+99,55,57,18,5,13,Level 2.2,On campus,Self-funded,Limited,58
+59,62,43,14,3,11,Level 2.1,Off campus,Family-sponsored,Reliable,57
+88,72,62,13,1,14,Level 3.2,Home,Scholarship,Limited,69
+48,30,41,8,1,9,Level 2.1,On campus,Self-funded,Reliable,33
+84,54,62,17,5,14,Level 1.2,On campus,Self-funded,Reliable,66
+88,68,66,21,12,14,Level 3.2,On campus,Self-funded,Reliable,64
+67,65,59,15,1,12,Level 1.1,Home,Self-funded,Reliable,58
+97,66,59,16,4,12,Level 4.2,On campus,Self-funded,Reliable,66
+78,56,44,12,0,12,Level 4.1,Off campus,Self-funded,Reliable,54
+88,45,43,11,1,11,Level 2.2,Off campus,Family-sponsored,Limited,49
+87,49,64,11,1,12,Level 4.2,On campus,Scholarship,Limited,60
+57,32,41,10,4,12,Level 4.2,Off campus,Family-sponsored,Limited,32
+75,73,58,14,5,12,Level 4.2,On campus,Scholarship,Limited,53
+96,67,60,11,2,14,Level 3.2,On campus,Self-funded,Reliable,64
+57,60,52,6,3,12,Level 1.2,Off campus,Family-sponsored,Limited,46
+87,39,27,5,6,11,Level 1.1,Home,Scholarship,Reliable,47
+91,70,54,13,10,13,Level 4.1,Home,Scholarship,Reliable,69
+80,73,52,13,5,12,Level 4.2,Off campus,Self-funded,Limited,58
+65,50,34,14,3,11,Level 3.1,Off campus,Self-funded,Limited,41
+88,56,51,9,1,14,Level 4.1,On campus,Scholarship,Limited,50
+57,55,59,12,6,11,Level 1.1,On campus,Self-funded,Reliable,47
+89,55,60,10,4,14,Level 2.1,Home,Scholarship,Reliable,67
+52,53,48,15,12,13,Level 3.2,On campus,Family-sponsored,Reliable,47
+80,50,48,17,4,12,Level 4.2,Home,Family-sponsored,Limited,54
+80,62,53,14,6,12,Level 4.1,Home,Self-funded,Reliable,66
+68,47,44,8,4,13,Level 2.2,Home,Self-funded,Reliable,50
+79,77,71,14,2,15,Level 1.2,Home,Self-funded,Limited,66
+81,74,71,13,2,15,Level 3.1,Off campus,Scholarship,Reliable,67
+69,40,35,3,8,10,Level 4.2,Off campus,Scholarship,Reliable,38
+77,44,53,12,6,12,Level 1.2,Home,Self-funded,Reliable,54
+80,67,62,11,1,14,Level 3.1,Home,Self-funded,Reliable,67
+87,61,63,15,4,13,Level 3.2,On campus,Scholarship,Reliable,62
+91,82,79,15,2,15,Level 3.1,On campus,Self-funded,Limited,77
+99,87,66,19,5,14,Level 2.1,On campus,Self-funded,Reliable,86
+71,61,50,11,3,13,Level 3.2,On campus,Scholarship,Limited,64
+80,60,54,13,2,12,Level 4.2,Home,Self-funded,Reliable,59
+67,67,74,17,1,15,Level 1.1,On campus,Self-funded,Reliable,64
+88,49,59,6,6,14,Level 3.2,Home,Self-funded,Limited,51
+52,32,38,1,3,11,Level 2.2,Home,Family-sponsored,Limited,34
+75,51,56,8,5,11,Level 3.1,Off campus,Family-sponsored,Reliable,52
+71,27,35,7,8,11,Level 3.2,Off campus,Scholarship,Limited,41
+80,63,67,10,12,12,Level 1.2,Off campus,Self-funded,Limited,55
+68,75,67,17,5,13,Level 3.2,Home,Family-sponsored,Limited,66
+65,68,53,7,1,13,Level 4.2,Home,Scholarship,Reliable,63
+87,60,51,11,1,12,Level 3.2,On campus,Self-funded,Reliable,54
+75,40,35,8,5,10,Level 4.1,Off campus,Self-funded,Reliable,40
+63,48,49,5,6,10,Level 2.2,On campus,Family-sponsored,Limited,44
+94,51,46,6,1,11,Level 4.1,On campus,Self-funded,Reliable,53
+70,58,49,8,0,11,Level 1.1,On campus,Self-funded,Reliable,50
+73,49,54,19,5,11,Level 1.1,Home,Family-sponsored,Reliable,55
+82,66,59,14,5,11,Level 4.2,Off campus,Family-sponsored,Limited,59
+81,54,61,6,2,13,Level 2.1,Home,Self-funded,Reliable,53
+70,42,39,8,9,11,Level 1.2,Off campus,Family-sponsored,Reliable,48
+58,52,43,12,3,12,Level 4.1,Off campus,Self-funded,Reliable,53
+89,68,70,6,7,13,Level 4.1,On campus,Self-funded,Limited,59
+59,56,47,15,3,13,Level 3.2,On campus,Self-funded,Reliable,48
+65,44,56,6,0,11,Level 1.2,Off campus,Scholarship,Reliable,53
+66,50,59,14,7,13,Level 4.2,Off campus,Self-funded,Reliable,55
+67,47,54,6,5,12,Level 2.1,Home,Self-funded,Reliable,45
+87,87,84,15,5,14,Level 2.1,Off campus,Self-funded,Limited,72
+70,39,33,4,5,10,Level 4.2,Off campus,Family-sponsored,Reliable,39
+66,44,47,2,4,10,Level 2.2,Home,Scholarship,Limited,46
+71,36,33,4,1,10,Level 2.1,Home,Family-sponsored,Reliable,35
+86,65,68,15,7,13,Level 4.1,Off campus,Family-sponsored,Limited,59
+76,55,50,9,1,12,Level 3.1,On campus,Self-funded,Limited,53
+78,77,59,20,6,13,Level 1.1,Home,Scholarship,Reliable,64
+53,61,63,13,3,13,Level 4.1,Off campus,Family-sponsored,Limited,48
+98,76,78,19,15,15,Level 4.1,Off campus,Scholarship,Reliable,75
+69,66,59,17,11,13,Level 3.2,Off campus,Self-funded,Reliable,55
+68,45,54,13,3,12,Level 4.2,On campus,Self-funded,Limited,48
+73,48,45,7,3,12,Level 1.2,On campus,Self-funded,Limited,51
+84,72,63,13,6,13,Level 3.2,On campus,Self-funded,Reliable,69
+61,47,44,2,4,10,Level 1.2,Home,Self-funded,Limited,39
+76,69,51,12,11,13,Level 2.2,On campus,Self-funded,Reliable,64
+63,44,36,5,0,10,Level 1.1,Off campus,Family-sponsored,Reliable,47
+55,48,50,5,4,11,Level 4.1,Home,Family-sponsored,Reliable,40
+75,66,67,17,4,14,Level 2.1,On campus,Self-funded,Limited,61
+58,51,36,6,6,11,Level 1.1,Off campus,Scholarship,Limited,44
+53,44,51,14,13,10,Level 3.2,On campus,Self-funded,Reliable,47
+79,64,64,11,3,13,Level 4.2,Off campus,Scholarship,Reliable,62
+72,48,35,11,4,10,Level 3.2,On campus,Self-funded,Limited,50
+75,51,59,12,3,12,Level 4.1,Off campus,Family-sponsored,Reliable,59
+54,36,44,2,2,11,Level 3.1,On campus,Self-funded,Limited,37
+71,50,58,7,6,12,Level 2.1,On campus,Self-funded,Limited,50
+77,52,55,12,3,12,Level 1.1,On campus,Self-funded,Limited,50
+64,72,67,13,5,14,Level 3.1,Home,Self-funded,Reliable,60
