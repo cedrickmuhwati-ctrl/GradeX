@@ -44,4 +44,4 @@ To regenerate the built-in data, delete the CSV files in `data/` and restart.
 Synthetic data, so accuracy figures describe the generator, not real students. Predictions show correlation,
 not causation, and must not be used to make decisions about real people.
 
-Contact: Cedrick A S Muhwati · cedrick@gmail.com
+Contact: Cedrick A S Muhwati · cedrickmuhwati@gmail.com
